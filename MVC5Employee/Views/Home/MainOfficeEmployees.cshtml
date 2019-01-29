@@ -1,0 +1,36 @@
+﻿
+@{
+    ViewBag.Title = "XYZ Detective Staff";
+    string[] staff = { "Scooby Doo", "Velma Dinkley", "Shaggy Rogers", "Daphne Blake", "Fred Jones" };
+    int staffLen = staff.Length;
+    string[] managers = { "Marvin Branagh", "Lean Kennedy", "Claire Redfield" };
+    int managerLen = managers.Length;
+    string[] officers = { "David Hostler", "John Velis", "Lisa Balbach" };
+    int officerLen = officers.Length;
+    var x = 0;
+}
+
+<hr />
+<img src="~/Content/detectives.jpg" alt="xyz detective" style="float:right;width:200px;outline:5px solid black;outline-offset:10px;" />
+<h2>XYZ Detective Agency Staff</h2>
+@for (x = 0; x < staffLen; x++)
+{
+    <p>@staff[x]</p>
+}
+<hr />
+<h2>XYZ Detective Agency Managers</h2>
+@foreach (var p in managers)
+{
+    <p>@p</p>
+}
+<hr />
+<h2>XYZ Detective Agency Corporate Office</h2>
+@{ 
+    x = 0;
+    while (x < officerLen)
+    {
+        <p>@officers[x]</p>
+        x += 1;
+    }
+}
+<hr />
